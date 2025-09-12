@@ -1,0 +1,8 @@
+# 🚫 Files and folders to be ignored by Git.
+# backend/.gitignore
+
+# Environment variables
+.env
+
+# Virtual environment
+.venv/
