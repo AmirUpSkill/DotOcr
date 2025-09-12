@@ -1,0 +1,7 @@
+# 📦 List of Python dependencies for the project.
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic-settings
+minio
+mistralai
