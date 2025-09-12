@@ -1,1 +1,9 @@
-# 📥 Defines the data structure for the /prompts response.
+from pydantic import BaseModel
+
+class PromptDto(BaseModel):
+    id: str
+    name: str
+    description: str
+
+class PromptListResponse(BaseModel):
+    prompts: list[PromptDto]
