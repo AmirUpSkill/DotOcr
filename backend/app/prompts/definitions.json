@@ -1,3 +1,17 @@
-{
-  "_comment": "📖 A JSON file containing the list of available prompts (ID, name, description)."
-}
+[
+  {
+    "id": "prompt_layout_all_en",
+    "name": "Resume Parser (Default)",
+    "description": "Extract original text in human reading order. Final output must be a single JSON object."
+  },
+  {
+    "id": "prompt_invoice_v1",
+    "name": "Invoice Extractor",
+    "description": "Extract invoice number, date, total amount and line-items."
+  },
+  {
+    "id": "prompt_raw_text_only",
+    "name": "Raw Text Dump",
+    "description": "Plain text in reading order, no formatting."
+  }
+]
