@@ -6,10 +6,25 @@ from .storage_exceptions import (
     StorageConnectionError,
 )
 
+from .ocr_exceptions import (
+    OcrError,
+    OcrProcessingError,
+    PromptNotFoundError,
+    OcrApiError,
+    OcrParsingError,
+)
+
 __all__ = [
+    # Storage exceptions
     "StorageError",
-    "FileUploadError", 
+    "FileUploadError",
     "FileNotFoundError",
     "FileValidationError",
     "StorageConnectionError",
+    # OCR exceptions
+    "OcrError",
+    "OcrProcessingError",
+    "PromptNotFoundError",
+    "OcrApiError",
+    "OcrParsingError",
 ]
