@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark OCR Interface Design System */
+
+@layer base {
+  :root {
+    /* Dark theme base colors */
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+    
+    /* OCR Interface specific colors */
+    --deep-black: 0 0% 10%;
+    --dark-gray: 0 0% 16%;
+    --medium-gray: 0 0% 20%;
+    --light-gray: 0 0% 25%;
+    --soft-gray: 0 0% 33%;
+    --text-gray: 0 0% 53%;
+    --light-text: 0 0% 67%;
+    
+    /* Accent colors */
+    --orange-accent: 20 100% 59%;
+    --blue-accent: 213 61% 59%;
+    --success: 134 61% 41%;
+    --warning: 45 100% 51%;
+    --error: 354 70% 54%;
+    
+    /* Interface specific tokens */
+    --sidebar-bg: 0 0% 12%;
+    --panel-bg: 0 0% 14%;
+    --card-bg: 0 0% 16%;
+    --border-color: 0 0% 25%;
+    --hover-bg: 0 0% 20%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--orange-accent)), hsl(var(--blue-accent)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--dark-gray)), hsl(var(--deep-black)));
+    
+    /* Shadows */
+    --shadow-panel: 0 4px 20px hsla(0, 0%, 0%, 0.3);
+    --shadow-card: 0 2px 10px hsla(0, 0%, 0%, 0.2);
+    --shadow-glow: 0 0 20px hsla(var(--orange-accent), 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
+    
+    /* Override shadcn defaults for dark theme */
+    --card: var(--card-bg);
+    --card-foreground: var(--foreground);
+    --popover: var(--panel-bg);
+    --popover-foreground: var(--foreground);
+    --primary: var(--orange-accent);
+    --primary-foreground: var(--deep-black);
+    --secondary: var(--dark-gray);
+    --secondary-foreground: var(--foreground);
+    --muted: var(--soft-gray);
+    --muted-foreground: var(--text-gray);
+    --accent: var(--blue-accent);
+    --accent-foreground: var(--foreground);
+    --destructive: var(--error);
+    --destructive-foreground: var(--foreground);
+    --border: var(--border-color);
+    --input: var(--card-bg);
+    --ring: var(--orange-accent);
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-screen;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--dark-gray));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--soft-gray));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--light-gray));
+  }
+}
